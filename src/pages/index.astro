@@ -1,0 +1,20 @@
+---
+import Container from "../components/Container.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/heroes/Hero.astro";
+import FeatureHead from "../components/FeatureHead.astro";
+import Expose from "../components/Expose.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+import TechFeatures from "../components/TechFeatures.astro";
+---
+
+<BaseLayout title="Yellow City Web Designs">
+  <Hero />
+  <FeatureHead />
+  <Container>
+    <Expose />
+  </Container>
+  <CtaBanner />
+  <TechFeatures />
+</BaseLayout>

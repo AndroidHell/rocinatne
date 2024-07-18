@@ -1,0 +1,66 @@
+---
+import Brand from "../BrandFooter.astro";
+const today = new Date();
+
+const footerLinks = [
+  {
+    title: "Services",
+    path: "#",
+    icon: "services",
+  },
+  {
+    title: "About",
+    path: "/about",
+    icon: "about",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+    icon: "blog",
+  },
+  {
+    title: "Contact Us",
+    path: "/contact",
+    icon: "contactus",
+  },
+];
+---
+
+<footer class="bg-gray-600 shadow dark:bg-gray-900">
+  <div class="mx-auto w-full max-w-screen-xl p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <div class="my-2 flex justify-center sm:my-0">
+        <Brand />
+      </div>
+
+      <div class="flex justify-center">
+        <ul
+          class="mb-6 flex flex-wrap items-center text-sm font-medium sm:mb-0"
+        >
+          {
+            footerLinks.map((item) => (
+              <>
+                <li>
+                  <a
+                    href={item.path}
+                    class="text-gray-200d me-4 text-white hover:text-primary-400 hover:underline md:me-6"
+                  >
+                    <span> {item.title}</span>
+                  </a>
+                </li>
+              </>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
+    <span class="block text-center text-sm text-gray-300 dark:text-gray-400"
+      >&copy; {today.getFullYear()}
+      <a href="#" class="text-primary-500 hover:text-gray-300 hover:underline"
+        >Yellow City Web Designs™</a
+      >. All Rights Reserved.</span
+    >
+  </div>
+</footer>

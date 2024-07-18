@@ -1,0 +1,121 @@
+---
+const GalleryItems = [
+  {
+    title: "Walker and Sons",
+    desc: "Lawn care company owned by a father and his two sons.",
+    image: "/gallery-lawncare.png",
+  },
+  {
+    title: "My personal portfolio",
+    desc: "My portfolio sits is hand written using AstroJS, DaisyUI, and not much else.",
+    image: "/gallery-portfolio.png",
+  },
+  {
+    title: "Fun & Gamez",
+    desc: "A site for a local game shop that specializes in parties and tournaments.",
+    image: "/gallery-funandgamez.png",
+  },
+  {
+    title: "Noise, Inc.",
+    desc: "Local Music venue collective focused on new, up and coming artists and bands.",
+    image: "/gallery-noise.png",
+  },
+  {
+    title: "SDB Photography",
+    desc: "A portfolio site showcasing a local photographer's work.",
+    image: "/gallery-sdbphotography.png",
+  },
+  {
+    title: "Yellow City Web Design",
+    desc: "Believe it or not, we also made our own website for our website dev company.",
+    image: "/gallery-placeholder.png",
+  },
+];
+---
+
+<div
+  class="grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3"
+>
+  {
+    GalleryItems.map((item, index) => (
+      <button
+        data-modal-target={`gallery-modal-${index + 1}`}
+        data-modal-toggle={`gallery-modal-${index + 1}`}
+        class="flex max-w-sm flex-col rounded-lg border border-gray-200 bg-gray-100 shadow dark:border-gray-700 dark:bg-gray-700"
+        type="button"
+      >
+        <img
+          class="flex-shrink-0 rounded-t-lg"
+          src={item.image}
+          alt={item.title}
+        />
+        <div class="flex-grow p-5">
+          <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white sm:text-lg lg:text-2xl">
+            {item.title}
+          </h5>
+          <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-300 md:text-base">
+            {item.desc}
+          </p>
+        </div>
+      </button>
+    ))
+  }
+</div>
+
+<!-- modal madness -->
+<div>
+  {
+    GalleryItems.map((item, index) => (
+      <div
+        id={`gallery-modal-${index + 1}`}
+        tabindex="-1"
+        aria-hidden="true"
+        class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+      >
+        <div class="relative max-h-full w-full max-w-4xl p-4">
+          {/* Modal content */}
+          <div class="relative rounded-lg bg-white shadow dark:bg-gray-700">
+            {/* Modal header */}
+            <div class="flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5">
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                {item.title}
+              </h3>
+              <button
+                type="button"
+                class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                data-modal-hide={`gallery-modal-${index + 1}`}
+              >
+                <svg
+                  class="h-3 w-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+                <span class="sr-only">Close modal</span>
+              </button>
+            </div>
+            {/* Modal body */}
+            <div class="space-y-4">
+              <img src={item.image} alt={item.title} />
+            </div>
+            {/* Modal footer */}
+            <div class="flex items-center rounded-b border-t border-gray-200 p-4 dark:border-gray-600 md:p-5">
+              <p class=" font-normal text-gray-700 dark:text-gray-300">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

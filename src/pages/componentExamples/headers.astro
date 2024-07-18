@@ -1,0 +1,202 @@
+---
+import Containter from "../../components/Container.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header1 from "../componentExamples/headers/header1.astro";
+import Header2 from "../componentExamples/headers/header2.astro";
+import Header3 from "../componentExamples/headers/header3.astro";
+---
+
+<BaseLayout title="Headers">
+  <Containter>
+    <section class="mt-8 bg-white dark:bg-gray-800">
+      <div
+        class="mx-auto flex max-w-screen-xl flex-col items-center px-4 py-8 sm:py-16 lg:px-6"
+      >
+        <div class="mb-8 max-w-screen-md lg:mb-16">
+          <h1
+            class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            We provide several header options
+          </h1>
+          <p class="text-gray-500 dark:text-gray-400 sm:text-xl">
+            Whether you want something modern or classic, we got you covered.
+            All our headers are fully responsive and come with darkmode
+            capabilities enabled out of the box.
+          </p>
+        </div>
+        <div
+          class="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3"
+        >
+          <div>
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12"
+            >
+              <svg
+                class="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">
+              Responsive Design
+            </h3>
+            <p>
+              <ul class="text-gray-500 dark:text-gray-400">
+                <li class="mb-2">
+                  Our headers come in a variety of styles, from sleek modern
+                  designs to timeless classic looks, ensuring they suit any
+                  website aesthetic.
+                </li>
+                <li class="mb-2">
+                  Each design is carefully crafted to provide a visually
+                  appealing and cohesive look for your site.
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div>
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12"
+            >
+              <svg
+                class="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m16 10 3-3m0 0-3-3m3 3H5v3m3 4-3 3m0 0 3 3m-3-3h14v-3"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">
+              Versatile Designs
+            </h3>
+            <p>
+              <ul class="text-gray-500 dark:text-gray-400">
+                <li class="mb-2">
+                  All headers are fully responsive, ensuring they look great on
+                  any device, from desktops to mobile phones.
+                </li>
+                <li class="mb-2">
+                  With responsive headers, your site's navigation remains
+                  user-friendly and accessible, enhancing the overall user
+                  experience.
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div>
+            <div
+              class="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12"
+            >
+              <svg
+                class="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold dark:text-white">
+              Dark Mode Enabled
+            </h3>
+            <p>
+              <ul class="text-gray-500 dark:text-gray-400">
+                <li class="mb-2">
+                  Every header includes built-in dark mode capabilities,
+                  allowing users to switch seamlessly between light and dark
+                  themes.
+                </li>
+                <li class="mb-2">
+                  Dark mode not only reduces eye strain in low-light
+                  environments but also gives your website a modern and stylish
+                  appearance.
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="mb-8 mt-8 grid grid-rows-3 gap-12">
+      <div>
+        <h2
+          class="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+        >
+          Header Option 1
+        </h2>
+        <Header1 />
+        <ul
+          class="grid list-inside list-disc grid-cols-1 gap-4 p-4 text-gray-500 dark:text-gray-400 md:grid-cols-2"
+        >
+          <!-- class="text-gray-500 dark:text-gray-400" -->
+          <li class="p-2">Elements inside responsive container</li>
+          <li class="p-2">Outer margins line up with rest of site content</li>
+          <li class="p-2">Responsiveness means header fits all screen sizes</li>
+          <li class="p-2">
+            Hamburger menu for slide-out side drawer in mobile view
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2
+          class="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+        >
+          Header Option 2
+        </h2>
+        <Header2 />
+        <ul
+          class="grid list-inside list-disc grid-cols-1 gap-4 p-4 text-gray-500 dark:text-gray-400 md:grid-cols-2"
+        >
+          <li class="p-2">Elements stretch to full witdh of viewport</li>
+          <li class="p-2">
+            Classic left-side navigation with call to action on right
+          </li>
+          <li class="p-2">Responsiveness means header fits all screen sizes</li>
+          <li class="p-2">
+            Hamburger menu for slide-out side drawer in mobile view
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2
+          class="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+        >
+          Header Option 3
+        </h2>
+        <Header3 />
+        <ul
+          class="grid list-inside list-disc grid-cols-1 gap-4 p-4 text-gray-500 dark:text-gray-400 md:grid-cols-2"
+        >
+          <li class="p-2">Elements stretch to full witdh of viewport</li>
+          <li class="p-2">Modern right-side navigation</li>
+          <li class="p-2">Responsiveness means header fits all screen sizes</li>
+          <li class="p-2">
+            Hamburger menu for slide-out side drawer in mobile view
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Containter>
+</BaseLayout>
