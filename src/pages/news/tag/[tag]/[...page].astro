@@ -37,14 +37,16 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 
 const { page } = Astro.props;
 const params = Astro.params;
+
+const title = `News - ${params.tag}`;
+// const desc = `Posts tagged with "${params.tag}"`;
+const image = "/hero-inner.webp";
 ---
 
 <BaseLayout title={"News - " + params.tag}>
+  <SectionHead title={title} image={image} />
+
   <BlogContainer>
-    <SectionHead>
-      <Fragment slot="title">News - {params.tag}</Fragment>
-      <Fragment slot="desc">Posts tagged with "{params.tag}"</Fragment>
-    </SectionHead>
     {
       page.data.length === 0 ? (
         <div class="w-full min-w-full border-l-4 border-gray-300 bg-gray-100 p-4">

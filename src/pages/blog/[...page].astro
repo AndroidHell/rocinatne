@@ -34,15 +34,15 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
 }
 
 const { page }: { page: PageProps } = Astro.props;
+
+const title = "Blog";
+const desc = "";
+const image = "/hero-inner.webp";
 ---
 
 <BaseLayout title="Blog">
+  <SectionHead title={title} desc={desc} image={image} />
   <BlogContainer>
-    <SectionHead>
-      <Fragment slot="title">Our Blog</Fragment>
-      <Fragment slot="desc">Keep up with our latest news</Fragment>
-    </SectionHead>
-
     {
       page.data.length === 0 ? (
         <div class="w-full min-w-full border-l-4 border-gray-300 bg-gray-100 p-4">

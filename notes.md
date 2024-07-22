@@ -4,4 +4,7 @@
 - set up footer links and colors and info
 - logo and company info - img or svg
 - favicon - add d path and color and flush cach with ctrl+click refresh, go to website.com/favicon.svg
-- set up blog or news - more on this later
+- set up blog or news - pick one format - will add featured in the future
+-
+
+tomorrow morning add new images for demo and add transparency to nav
