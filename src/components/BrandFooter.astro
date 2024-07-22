@@ -3,20 +3,30 @@ import { Icon } from "astro-icon/components";
 import { brand } from "../common/companyItems";
 ---
 
-<a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-  <!-- <Icon
-    name="logo"
-    class="logo-fixed size-16 text-yellow-300 dark:text-yellow-300"
-  /> -->
-  <img
-    src="../../logo-outline.png"
-    class="w-16"
-    width="64px"
-    height="64px"
-    alt="brand logo"
-  />
-  <span
-    class="logo self-center whitespace-nowrap text-3xl font-semibold text-gray-200 dark:text-white"
-    >{brand.company.name}</span
-  >
-</a>
+<div class="flex flex-col">
+  <div class="grid justify-center lg:justify-start">
+    <div class="mb-6 flex items-center space-x-3">
+      <img
+        src="../../logo-outline.png"
+        class="w-16"
+        width="64px"
+        height="64px"
+        alt="brand logo"
+      />
+      <span
+        class="logo self-center whitespace-nowrap text-3xl font-semibold text-gray-100"
+        >{brand.company.name}</span
+      >
+    </div>
+    <div
+      class="mb-6 flex items-center space-x-3 text-sm font-normal text-gray-100"
+    >
+      Extra area for content 1
+    </div>
+    <div
+      class="mb-6 flex items-center space-x-3 text-sm font-normal text-gray-100"
+    >
+      Extra area for content 2
+    </div>
+  </div>
+</div>

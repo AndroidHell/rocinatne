@@ -5,22 +5,19 @@ export const navigationItems = [
     icon: "home",
   },
   {
-    title: "Gallery",
-    path: "/gallery",
-    icon: "gallery",
+    title: "About Us",
+    path: "/about",
+    icon: "about",
   },
   {
-    title: "Components",
+    title: "Services",
     path: "#",
     icon: "components",
     children: [
-      {
-        title: "Headers",
-        path: "/componentExamples/headers",
-      },
-      { title: "Footers", path: "/componentExamples/footers" },
-      { title: "Heros", path: "/comingsoon" },
-      { title: "Misc", path: "/comingsoon" },
+      { title: "Service 1", path: "#" },
+      { title: "Service 2", path: "#" },
+      { title: "Service 3", path: "#" },
+      { title: "Service 4", path: "#" },
     ],
   },
   {

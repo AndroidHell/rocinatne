@@ -1,58 +1,78 @@
 ---
-import Brand from "../BrandFooter.astro";
+import Brand from "./BrandFooter.astro";
 const today = new Date();
 
 const footerLinks = [
   {
-    title: "Resources",
+    title: "Information",
     children: [
-      { title: "Gallery", path: "/gallery" },
-      { title: "News", path: "/blog" },
+      { title: "Home", path: "/" },
+      { title: "About Us", path: "/about" },
+      { title: "Projects", path: "/projects" },
+      { title: "Reviews", path: "/reviews" },
+      { title: "Contact", path: "/contact" },
     ],
   },
-  // {
-  //   title: "Follow Us",
-  //   children: [
-  //     { title: "Facebook", path: "#" },
-  //     { title: "Twitter", path: "#" },
-  //   ],
-  // },
   {
-    title: "Our Company",
+    title: "Services",
     children: [
-      { title: "About YCWD", path: "/about" },
-      { title: "Contact Us", path: "/contact" },
+      { title: "Service 1", path: "" },
+      { title: "Service 2", path: "" },
+      { title: "Service 3", path: "" },
+      { title: "Service 4", path: "" },
+    ],
+  },
+  {
+    title: "Contact",
+    children: [
+      { title: "1234 Main St\nSomewhere, TX 78910", path: "" },
+      { title: "(555) 555-5555", path: "" },
+      { title: "company.name@email.com", path: "" },
     ],
   },
 ];
 ---
 
-<footer class="bg-gray-600 shadow dark:bg-gray-900">
-  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-    <div class="md:flex md:justify-between">
-      <!-- brand  -->
-      <div class="mb-6 md:mb-0">
+<style>
+  .address {
+    white-space: pre-line; /* Maintains line breaks */
+  }
+</style>
+
+<footer class="bg-gray-900 shadow dark:bg-gray-900">
+  <div class="mx-auto w-full max-w-screen-xl px-4 pb-8 pt-12 lg:pt-24">
+    <div class="pb-8 md:justify-between lg:flex">
+      <div class="mb-6 md:mb-12">
         <Brand />
       </div>
-      <!-- links  change sm:grid-cols-x for number of link columns -->
-      <div class="grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6">
+      <div class="mx-12 grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6 lg:mx-0">
         {
           footerLinks.map((item) => (
             <>
               <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase text-gray-200 dark:text-white">
+                {/* <h2 class="mb-6 text-sm font-bold uppercase text-gray-100">
                   {item.title}
+                  <hr class="mt-2 border-t-2 border-primary-500 " />
+                </h2> */}
+                <h2 class="mb-6 w-1/2 text-sm font-bold uppercase text-gray-100">
+                  {item.title}
+                  <hr class="mt-2 w-full border-t-2 border-primary-500" />
                 </h2>
 
-                <ul class="font-medium text-gray-500 dark:text-gray-400">
+                {/* conditional that makes a link if path is not empty */}
+                <ul class="font-normal text-gray-500 dark:text-gray-400">
                   {item.children.map((child) => (
                     <li class="mb-4">
-                      <a
-                        href={child.path}
-                        class="text-primary-400 hover:text-gray-300 hover:underline"
-                      >
-                        {child.title}
-                      </a>
+                      {child.path ? (
+                        <a
+                          href={child.path}
+                          class="address text-white hover:text-primary-400 hover:underline"
+                        >
+                          {child.title}
+                        </a>
+                      ) : (
+                        <span class="address text-white">{child.title}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -68,7 +88,7 @@ const footerLinks = [
       <span class="text-sm text-gray-300 dark:text-gray-400 sm:text-center"
         >&copy; {today.getFullYear()}
         <a href="/" class="text-primary-400 hover:text-gray-300 hover:underline"
-          >Yellow City Web Designs™</a
+          >Company Name™</a
         >. All Rights Reserved.
       </span>
 
