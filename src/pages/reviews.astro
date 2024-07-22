@@ -3,14 +3,17 @@ import Container from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHead from "../components/SectionHead.astro";
 import ClientGallery from "../components/ClientGallery.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+const title = "Our Reviews";
+const desc = "";
+const image = "/hero-inner.webp";
 ---
 
-<BaseLayout title="Gallery" description="Gallery">
+<BaseLayout title="Reviews" description="Reviews">
+  <SectionHead title={title} desc={desc} image={image} />
   <Container>
-    <SectionHead>
-      <Fragment slot="title">Our Gallery</Fragment>
-      <Fragment slot="desc">Check out what we have made for people</Fragment>
-    </SectionHead>
     <ClientGallery />
   </Container>
+  <CtaBanner />
 </BaseLayout>

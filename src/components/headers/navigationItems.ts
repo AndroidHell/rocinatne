@@ -9,26 +9,26 @@ export const navigationItems = [
     path: "/about",
     icon: "about",
   },
+  // {
+  //   title: "Services",
+  //   path: "#",
+  //   icon: "components",
+  //   children: [
+  //     { title: "Service 1", path: "#" },
+  //     { title: "Service 2", path: "#" },
+  //     { title: "Service 3", path: "#" },
+  //     { title: "Service 4", path: "#" },
+  //   ],
+  // },
   {
-    title: "Services",
-    path: "#",
-    icon: "components",
-    children: [
-      { title: "Service 1", path: "#" },
-      { title: "Service 2", path: "#" },
-      { title: "Service 3", path: "#" },
-      { title: "Service 4", path: "#" },
-    ],
+    title: "Projects",
+    path: "/projects",
+    icon: "projects",
   },
   {
-    title: "About",
-    path: "/about",
-    icon: "about",
-  },
-  {
-    title: "News",
-    path: "/news",
-    icon: "blog",
+    title: "Reviews",
+    path: "/reviews",
+    icon: "reviews",
   },
   {
     title: "Blog",

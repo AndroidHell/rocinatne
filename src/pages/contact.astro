@@ -1,8 +1,12 @@
 ---
 import Containter from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Sectionhead from "../components/SectionHead.astro";
+import SectionHead from "../components/SectionHead.astro";
 import ContactInfo from "../components/ContactInfo.astro";
+
+const title = "Contact Us";
+const desc = "";
+const image = "/hero-inner.webp";
 
 // const web3FormsAccessKey = import.meta.env.WEB3FORMS_ACCESS_KEY; //dev
 const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY; //prod
@@ -10,21 +14,10 @@ const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY; //prod
 
 <!-- maybe bring the form out to it's own component -->
 <BaseLayout title="Contact Us" description="Contact Us">
+  <SectionHead title={title} desc={desc} image={image} />
   <Containter class="text-gray-600 dark:text-gray-300">
     <section class="mt-16 bg-white dark:bg-gray-800 lg:mt-0">
       <div class="mx-auto max-w-screen-md px-4 py-8 lg:pb-4 lg:pt-16">
-        <h1
-          class="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
-        >
-          Contact Us
-        </h1>
-        <p
-          class="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16"
-        >
-          Starting a new business? Got a website in mind? Looking to hit the top
-          search results on Google? Let us know what you are after!
-        </p>
-
         <form
           action="https://api.web3forms.com/submit"
           method="POST"

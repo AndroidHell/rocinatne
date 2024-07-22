@@ -1,14 +1,21 @@
 ---
-
+const { title, desc, image } = Astro.props;
 ---
 
-<div class="mx-auto mt-8 max-w-screen-md px-4 py-16 lg:mt-0 lg:py-16">
-  <h1
-    class="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white"
-  >
-    <slot name="title">Title</slot>
-  </h1>
-  <p class="text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl">
-    <slot name="desc">Some description goes here</slot>
-  </p>
-</div>
+<section
+  class="max-w-full bg-gray-500 bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply md:h-96 md:bg-center md:pb-8"
+  style={`background-image: url('${image}')`}
+  aria-labelledby="section-heading"
+>
+  <div class="mx-auto mt-8 max-w-screen-md px-4 py-16 lg:mt-4 lg:py-16">
+    <h1
+      id="section-heading"
+      class="m-4 pt-12 text-center text-7xl font-semibold tracking-tight text-white"
+    >
+      {title}
+    </h1>
+    <p class="text-center font-light text-gray-200 sm:text-xl">
+      {desc}
+    </p>
+  </div>
+</section>
