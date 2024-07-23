@@ -2,9 +2,7 @@
 import Containter from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHead from "../components/SectionHead.astro";
-import Faq from "../components/Faq.astro";
-import AboutHead from "../components/AboutHead.astro";
-import Pricing from "../components/Pricing.astro";
+import AboutBody from "../components/AboutBody.astro";
 import CtaBanner from "../components/CtaBanner.astro";
 
 const title = "About Us";
@@ -15,9 +13,7 @@ const image = "/hero-inner.webp";
 <BaseLayout title="About Us" description="About Us">
   <SectionHead title={title} desc={desc} image={image} />
   <Containter>
-    <AboutHead />
-    <Pricing />
-    <Faq />
+    <AboutBody />
   </Containter>
   <CtaBanner />
 </BaseLayout>

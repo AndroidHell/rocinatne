@@ -9,21 +9,14 @@ export const navigationItems = [
     path: "/about",
     icon: "about",
   },
-  // {
-  //   title: "Services",
-  //   path: "#",
-  //   icon: "components",
-  //   children: [
-  //     { title: "Service 1", path: "#" },
-  //     { title: "Service 2", path: "#" },
-  //     { title: "Service 3", path: "#" },
-  //     { title: "Service 4", path: "#" },
-  //   ],
-  // },
   {
     title: "Projects",
-    path: "/projects",
+    path: "#",
     icon: "projects",
+    children: [
+      { title: "Project 1", path: "/projects" },
+      { title: "Project 2", path: "/projects" },
+    ],
   },
   {
     title: "Reviews",
@@ -35,9 +28,9 @@ export const navigationItems = [
     path: "/blog",
     icon: "blog",
   },
-  {
-    title: "Contact Us",
-    path: "/contact",
-    icon: "contactus",
-  },
+  // {
+  //   title: "Contact Us",
+  //   path: "/contact",
+  //   icon: "contactus",
+  // },
 ];
