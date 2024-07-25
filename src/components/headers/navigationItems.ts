@@ -1,4 +1,11 @@
-export const navigationItems = [
+interface NavItem {
+  title: string;
+  path: string;
+  icon: string;
+  children?: { title: string; path: string }[]; // Make children optional
+}
+
+export const navigationItems: NavItem[] = [
   {
     title: "Home",
     path: "/",
