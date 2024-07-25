@@ -25,4 +25,4 @@
 
 - update info in basehead
 - update info in astro.config
--
+- site og_title is currently updated in the index page(for some reason)
