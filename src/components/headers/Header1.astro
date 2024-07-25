@@ -69,9 +69,9 @@ import NavigationLinks from "./widgets/NavigationLinks.astro";
   window.addEventListener("scroll", (e) => {
     const nav = document.querySelector(".nav");
     if (window.scrollY) {
-      nav?.classList.add("shadow");
+      nav?.classList.add("shadow-xl");
     } else {
-      nav?.classList.remove("shadow");
+      nav?.classList.remove("shadow-xl");
     }
   });
 </script>

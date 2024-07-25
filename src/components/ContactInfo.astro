@@ -1,13 +1,29 @@
 ---
-
+const contactInfo = {
+  phone: {
+    number: "(555) 555-5555",
+    copyText: "555-555-5555",
+  },
+  email: {
+    address: "company.name@email.com",
+    copyText: "yellowcityweb.dev@gmail.com",
+  },
+  address: {
+    line1: "1234 Main St.",
+    line2: "Somewhere, TX 78910",
+    copyText: "Address: 1234 Main St., Somewhere, TX 78910",
+  },
+};
 ---
 
 <section class="bg-white dark:bg-gray-800">
-  <div class="mx-auto max-w-screen-md px-4 py-8 sm:py-16 lg:px-6">
-    <div class="space-y-8 sm:grid sm:grid-cols-2 sm:gap-12 md:space-y-0">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6">
+    <div
+      class="grid space-y-8 sm:gap-12 md:grid-cols-3 md:space-y-0 lg:grid-cols-1"
+    >
       <div
-        class="flex cursor-pointer flex-col items-center justify-start rounded-lg bg-gray-100 p-4 shadow dark:bg-gray-700"
-        onclick="copyToClipboard('806-223-9548')"
+        class="flex transform cursor-pointer flex-col items-center justify-start rounded-lg bg-gray-50 p-4 shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-gray-700"
+        onclick={`copyToClipboard('${contactInfo.phone.copyText}')`}
         aria-label="click for phone number"
       >
         <div
@@ -25,11 +41,13 @@
           </svg>
         </div>
         <h3 class="mb-2 text-xl font-bold dark:text-white">Phone:</h3>
-        <p class="text-gray-500 dark:text-gray-400">(806) 223-9548</p>
+        <p class="text-gray-500 dark:text-gray-400">
+          {contactInfo.phone.number}
+        </p>
       </div>
       <div
-        class="flex cursor-pointer flex-col items-center justify-start rounded-lg bg-gray-100 p-4 shadow dark:bg-gray-700"
-        onclick="copyToClipboard('yellowcityweb.dev@gmail.com')"
+        class="flex transform cursor-pointer flex-col items-center justify-start rounded-lg bg-gray-50 p-4 shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-gray-700"
+        onclick={`copyToClipboard('${contactInfo.email.copyText}')`}
         aria-label="click for email"
       >
         <div
@@ -51,14 +69,14 @@
         </div>
         <h3 class="mb-2 text-xl font-bold dark:text-white">Email:</h3>
         <p class="text-gray-500 dark:text-gray-400">
-          yellowcityweb.dev@gmail.com
+          {contactInfo.email.address}
         </p>
       </div>
 
       <!-- make parent div max xl if using addy card -->
-      <!-- <div
-        class="flex cursor-pointer flex-col items-center justify-start rounded-lg bg-gray-100 p-4 shadow dark:bg-gray-700"
-        onclick="copyToClipboard('Address: 1000 Some St., Amarillo, TX 79102')"
+      <div
+        class="flex transform cursor-pointer flex-col items-center justify-start rounded-lg bg-gray-50 p-4 shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-gray-700"
+        onclick={`copyToClipboard('${contactInfo.address.copyText}')`}
         aria-label="click for address"
       >
         <div
@@ -77,24 +95,26 @@
           </svg>
         </div>
         <h3 class="mb-2 text-xl font-bold dark:text-white">Or stop by</h3>
-        <p class="text-gray-500 dark:text-gray-400">1000 Some St.</p>
-        <p class="text-gray-500 dark:text-gray-400">Amarillo, TX</p>
-        <p class="text-gray-500 dark:text-gray-400">79102</p>
+        <p class="text-gray-500 dark:text-gray-400">
+          {contactInfo.address.line1}
+        </p>
+        <p class="text-gray-500 dark:text-gray-400">
+          {contactInfo.address.line2}
+        </p>
       </div>
-    </div> -->
     </div>
   </div>
-
-  <script is:inline>
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(
-        () => {
-          alert(text + " copied to clipboard!");
-        },
-        (err) => {
-          alert("Failed to copy text: ", err);
-        },
-      );
-    }
-  </script>
 </section>
+
+<script is:inline>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(
+      () => {
+        alert(text + " copied to clipboard!");
+      },
+      (err) => {
+        alert("Failed to copy text: ", err);
+      },
+    );
+  }
+</script>
