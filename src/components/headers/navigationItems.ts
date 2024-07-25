@@ -2,7 +2,8 @@ interface NavItem {
   title: string;
   path: string;
   icon: string;
-  children?: { title: string; path: string }[]; // Make children optional
+  children?: { title: string; path: string }[];
+  target?: string; //add target: "_blank" to open in new tab
 }
 
 export const navigationItems: NavItem[] = [

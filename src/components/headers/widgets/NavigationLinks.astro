@@ -58,6 +58,10 @@ const currentPath = Astro.url.pathname;
             <li>
               <a
                 href={item.path}
+                target={item.target || "_self"}
+                rel={
+                  item.target === "_blank" ? "noopener noreferrer" : undefined
+                }
                 class="block rounded px-3 py-2 text-lg font-semibold text-gray-600 hover:text-primary-500 dark:text-gray-100 dark:hover:text-gray-300 md:p-0"
               >
                 <span>{item.title}</span>
