@@ -20,3 +20,9 @@
 - add some more stuff to home page
 - touch up blog - maybe add a header for now and make image smaller
 - fill projects page?
+
+### card notes
+
+- update info in basehead
+- update info in astro.config
+-

@@ -1,6 +1,6 @@
 export const brand = {
   company: {
     name: "Company Name",
-    tagline: "AmaWeb",
+    tagline: "Company Tag Name",
   },
 };
