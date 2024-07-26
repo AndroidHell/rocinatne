@@ -14,15 +14,10 @@
 
 ## tomorrow - well actually Thursday
 
-- check deets on og cards
-- redo feature head - shadow, center, float it?
-- parallax for cta ahd headers?
-- add some more stuff to home page
 - touch up blog - maybe add a header for now and make image smaller
-- fill projects page?
 
 ### card notes
 
 - update info in basehead
 - update info in astro.config
-- site og_title is currently updated in the index page(for some reason)
+- site og_title is currently updated in the index page(for some reason - fix this later)
