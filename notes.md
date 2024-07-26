@@ -10,6 +10,7 @@
 - set up blog or news - pick one format - will add featured in the future
 - projects, services, gallery, reviews - prob 2
 - home page - about, services or sales pitch, maybe small gallery, expose, carousel, small review, some other stuff
+- add email env var to netlify when hosting
 -
 
 ## tomorrow - well actually Thursday
