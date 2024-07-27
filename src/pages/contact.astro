@@ -138,10 +138,7 @@ const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY; //prod
     </div>
   </Containter>
 </BaseLayout>
-
 <script is:inline>
-  // use astro:page-load event if you are using View Transitions
-
   document.addEventListener(
     "DOMContentLoaded",
     () => {
@@ -151,10 +148,22 @@ const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY; //prod
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         form.classList.add("was-validated");
+
+        // Custom validation for textarea length
+        const message = document.getElementById("message");
+        if (message.value.length < 10 && message.value.length >= 0) {
+          result.classList.add("text-red-500");
+          result.innerHTML =
+            "Please send a meaningful message (10 character minimum).";
+          message.focus();
+          return;
+        }
+
         if (!form.checkValidity()) {
           form.querySelectorAll(":invalid")[0].focus();
           return;
         }
+
         const formData = new FormData(form);
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
