@@ -10,7 +10,9 @@
 - set up blog or news - pick one format - will add featured in the future
 - projects, services, gallery, reviews - prob 2
 - home page - about, services or sales pitch, maybe small gallery, expose, carousel, small review, some other stuff
-- add email env var to netlify when hosting
+- add WEB3FORMS_ACCESS_KEY env var for email form to netlify when hosting - rebuild project and wait a bit after adding env var
+- add custom domain name - notes for this later
+- set up decap cms once hosting is done
 -
 
 ## tomorrow - well actually Thursday
@@ -22,3 +24,9 @@
 - update info in basehead
 - update info in astro.config
 - site og_title is currently updated in the index page(for some reason - fix this later)
+
+### decap cms notes
+
+- enable idnentify and git gateway: https://decapcms.org/docs/choosing-a-backend/
+- invitation for users: https://docs.netlify.com/security/secure-access-to-sites/identity/registration-login/
+- set password, then navigate to website.com/admin and login with email and password
