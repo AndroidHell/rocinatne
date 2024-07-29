@@ -1,7 +1,7 @@
 ---
 import Containter from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SectionHead from "../components/HeroInner.astro";
+import HeroInner from "../components/HeroInner.astro";
 import ContactInfo from "../components/ContactInfo.astro";
 
 const title = "Contact Us";
@@ -14,7 +14,7 @@ const web3FormsAccessKey = process.env.WEB3FORMS_ACCESS_KEY; //prod
 
 <!-- maybe bring the form out to it's own component -->
 <BaseLayout title="Contact Us" description="Contact Us">
-  <SectionHead title={title} desc={desc} image={image} />
+  <HeroInner title={title} desc={desc} image={image} />
   <Containter class="text-gray-600 dark:text-gray-300">
     <div class="grid grid-cols-1 lg:grid-cols-3">
       <div class="lg:col-span-2">

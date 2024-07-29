@@ -4,7 +4,7 @@ pubDate: Jul 17 2024
 heroImage: /blog-placeholder.jpg
 badge: badge
 updatedDate: Jul 18, 2024 10:43 AM
-title: Placeholder Blog Post
+title: Placeholder Blog Post 2
 tags:
   - tag1
   - tag2

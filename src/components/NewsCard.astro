@@ -5,7 +5,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div
-  class="max-w-lg overflow-hidden rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800"
+  class="mx-auto overflow-hidden border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800"
 >
   <a href={url} target={target}>
     {
@@ -16,7 +16,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           height={422}
           format="webp"
           alt={title}
-          class="transform rounded-t-lg  transition-transform hover:scale-105"
+          class=" "
         />
       )
     }
@@ -29,7 +29,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
         {title}
         {
           badge && (
-            <span class="ml-2 inline-block rounded bg-gray-500 px-2 py-1 text-sm font-semibold text-white dark:bg-gray-400">
+            <span class="ml-2 inline-block rounded bg-gray-700 px-2 py-1 text-sm font-semibold text-white dark:bg-gray-600">
               {badge}
             </span>
           )
@@ -44,7 +44,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
         <a
           href={url}
           target={target}
-          class="inline-flex items-center rounded-lg bg-primary-500 px-3 py-2 text-center text-sm font-medium text-white hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700"
+          class="inline-flex items-center bg-primary-500 px-3 py-2 text-center text-sm font-medium text-white hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700"
         >
           Read more
           <svg
