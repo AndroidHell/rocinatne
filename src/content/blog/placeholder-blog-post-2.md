@@ -1,11 +1,11 @@
 ---
+title: Placeholder Blog Post 2
 description: This is a placeholder to show how the markdown works
 pubDate: Jul 17 2024
-heroImage: /blog-placeholder.jpg
-badge: badge
 updatedDate: Jul 18, 2024 10:43 AM
-title: Placeholder Blog Post 2
-pinned: true
+heroImage: /blog-placeholder.jpg
+pinned: false
+badge: badge
 tags:
   - tag1
   - tag2
