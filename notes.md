@@ -17,8 +17,11 @@
 
 ## tomorrow - well actually Thursday
 
-- blog - copy format to individual blog posts
 - blog - build out featured component
+- check seo stats
+- make ycwd github
+- make ycwd netlify
+- figure out how to keep 2 accounts separate
 
 ### card notes
 
