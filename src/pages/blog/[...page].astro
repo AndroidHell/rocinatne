@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogContainer from "../../components/BlogContainer.astro";
-import SectionHead from "../../components/HeroInner.astro";
+import HeroInner from "../../components/HeroInner.astro";
 import NewsCard from "../../components/BlogCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug";
@@ -42,7 +42,7 @@ const image = "/hero-inner.webp";
 ---
 
 <BaseLayout title="Blog">
-  <SectionHead title={title} desc={desc} image={image} />
+  <HeroInner title={title} desc={desc} image={image} />
 
   <BlogContainer>
     <div class="mt-8 grid grid-cols-1 lg:grid-cols-3">

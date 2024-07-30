@@ -17,7 +17,8 @@
 
 ## tomorrow - well actually Thursday
 
-- touch up blog - maybe add a header for now and make image smaller
+- blog - copy format to individual blog posts
+- blog - build out featured component
 
 ### card notes
 
