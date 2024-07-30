@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug";
 import PinnedPosts from "../../components/PinnedPosts.astro";
 
-interface NewsPost {
+interface BlogPost {
   data: {
     title: string;
     heroImage: string;
@@ -21,7 +21,7 @@ interface NewsPost {
 }
 
 interface PageProps {
-  data: NewsPost[];
+  data: BlogPost[];
   url: {
     prev?: string;
     next?: string;
@@ -118,7 +118,7 @@ const image = "/hero-inner.webp";
         </div>
       </div>
       <div class="lg:cols-span-1">
-        <!-- <PinnedPosts /> -->
+        <PinnedPosts />
       </div>
     </div>
   </BlogContainer>

@@ -5,6 +5,7 @@ const blogSchema = z.object({
   pubDate: z.coerce.date(),
   updatedDate: z.union([z.string().length(0), z.coerce.date()]).optional(),
   heroImage: z.string().optional(),
+  pinned: z.boolean().optional(), //added
   badge: z.string().optional(),
   tags: z
     .array(z.string())

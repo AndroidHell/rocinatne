@@ -5,7 +5,7 @@ heroImage: /blog-placeholder.jpg
 badge: badge
 updatedDate: Jul 18, 2024 10:43 AM
 title: Placeholder Blog Post 2
-pinned: false
+pinned: true
 tags:
   - tag1
   - tag2
