@@ -17,8 +17,7 @@
 
 ## tomorrow - well actually Thursday
 
-- blog - build out featured component
-- check seo stats
+- check seo stats - current
 - make ycwd github
 - make ycwd netlify
 - figure out how to keep 2 accounts separate
