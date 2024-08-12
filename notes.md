@@ -33,3 +33,8 @@
 - enable idnentify and git gateway: https://decapcms.org/docs/choosing-a-backend/
 - invitation for users: https://docs.netlify.com/security/secure-access-to-sites/identity/registration-login/
 - set password, then navigate to website.com/admin and login with email and password
+
+### netlify notes
+
+- need to be logged in to yellowcitywebdev github to deploy from gh
+-
