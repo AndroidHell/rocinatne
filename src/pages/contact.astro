@@ -9,6 +9,12 @@ const desc = "";
 const image = "/hero-inner.webp";
 ---
 
+<!--
+gonna keep the web3form verson intact for now
+might switch back later
+netflify forms is way cleaner but 100 submission limit
+
+-->
 <BaseLayout title="Contact Us" description="Contact Us">
   <HeroInner title={title} desc={desc} image={image} />
   <Containter class="text-gray-600 dark:text-gray-300">
@@ -36,6 +42,7 @@ const image = "/hero-inner.webp";
               </div>
             </div>
             <form
+              name="contact"
               method="POST"
               id="form"
               data-astro-reload
