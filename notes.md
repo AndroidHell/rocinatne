@@ -15,7 +15,7 @@
 - set up decap cms once hosting is done
 -
 
-## tomorrow - well actually Thursday
+## tomorrow - well actually Thursday... Friday?
 
 - check seo stats - current
 - make ycwd github
@@ -37,4 +37,6 @@
 ### netlify notes
 
 - need to be logged in to yellowcitywebdev github to deploy from gh
+- netlify forms needs user email added in form notifications
+- no need for env var with this method, env var is just for web3forms
 -
