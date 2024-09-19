@@ -17,9 +17,9 @@ netflify forms is way cleaner but 100 submission limit
 <BaseLayout title="Contact Us" description="Contact Us">
   <HeroInner title={title} desc={desc} image={image} />
   <Containter class="text-gray-600 dark:text-gray-300">
-    <div class="grid grid-cols-1 lg:grid-cols-3">
+    <section class="grid grid-cols-1 lg:grid-cols-3">
       <div class="lg:col-span-2">
-        <section class="mt-16 bg-white dark:bg-gray-800 lg:mt-0">
+        <div class="mt-16 bg-white dark:bg-gray-800 lg:mt-0">
           <div class="mx-auto max-w-screen-md px-4 py-8 lg:pb-4 lg:pt-16">
             <div class="text prose">
               <span
@@ -45,7 +45,6 @@ netflify forms is way cleaner but 100 submission limit
               method="POST"
               id="form"
               data-astro-reload
-              novalidate
               class="space-y-4"
               data-netlify="true"
             >
@@ -116,11 +115,11 @@ netflify forms is way cleaner but 100 submission limit
               >
             </form>
           </div>
-        </section>
+        </div>
       </div>
       <div class="content-center lg:col-span-1">
         <ContactInfo />
       </div>
-    </div>
+    </section>
   </Containter>
 </BaseLayout>
