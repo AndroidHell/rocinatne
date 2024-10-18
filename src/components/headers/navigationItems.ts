@@ -14,7 +14,7 @@ export const navigationItems: NavItem[] = [
   },
   {
     title: "About Us",
-    path: "/about-us",
+    path: "/about",
     icon: "about",
   },
   {
